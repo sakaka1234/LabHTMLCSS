@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .form-container {
+            width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        p.subtitle {
+            text-align: center;
+            font-style: italic;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .form-row {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+            vertical-align: top;
+        }
+        input[type="text"] {
+            width: 200px;
+            padding: 3px;
+        }
+        select {
+            width: 200px;
+            padding: 3px;
+        }
+        textarea {
+            width: 100%;
+            height: 80px;
+        }
+        .radio-group {
+            display: block;
+            margin: 5px 0;
+        }
+        .submit-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            padding: 5px 20px;
+            background-color: #e0e0e0;
+            border: 1px solid #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Interview Feedback</h1>
+        <p class="subtitle">This type of form may be an easy way to consolidate/standardize feedback on interview candidates.</p>
+        
+        <div class="form-row">
+            <label for="candidateName">Candidate Name</label>
+            <input type="text" id="candidateName" name="candidateName">
+            
+            <label for="position" style="margin-left: 20px;">Position Applied For</label>
+            <input type="text" id="position" name="position">
+        </div>
+        
+        <div class="form-row">
+            <div style="width: 250px;">
+                <label for="educationLevel">Education Level</label>
+                <select id="educationLevel" name="educationLevel">
+                    <option value="highSchool">1) High School</option>
+                    <option value="bachelors">2) Bachelors Degree</option>
+                    <option value="masters">3) Masters Degree</option>
+                    <option value="doctoral">4) Doctoral Degree</option>
+                    <option value="professional" selected>5) Professional Certification</option>
+                </select>
+            </div>
+            
+            <div style="width: 350px;">
+                <div>Candidate is a good fit for the position</div>
+                <div class="radio-group">
+                    <input type="radio" id="agree" name="goodFit" value="agree">
+                    <label for="agree" style="width: auto;">Agree</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="somewhatAgree" name="goodFit" value="somewhatAgree">
+                    <label for="somewhatAgree" style="width: auto;">Somewhat Agree</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="neutral" name="goodFit" value="neutral">
+                    <label for="neutral" style="width: auto;">Neutral</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="somewhatDisagree" name="goodFit" value="somewhatDisagree">
+                    <label for="somewhatDisagree" style="width: auto;">Somewhat Disagree</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="disagree" name="goodFit" value="disagree">
+                    <label for="disagree" style="width: auto;">Disagree</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label>Should we hire this candidate?</label>
+            <input type="radio" id="yes" name="hireCandidate" value="yes">
+            <label for="yes" style="width: auto;">Yes</label>
+            <input type="radio" id="no" name="hireCandidate" value="no">
+            <label for="no" style="width: auto;">No</label>
+        </div>
+        
+        <div class="form-group">
+            <label for="comments">Comments</label>
+            <textarea id="comments" name="comments"></textarea>
+        </div>
+        
+        <div class="submit-button">
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</body>
+</html>
