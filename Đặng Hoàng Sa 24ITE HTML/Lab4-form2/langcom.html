@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin hồ sơ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            position: relative;
+        }
+        
+        .section-title {
+            border-left: 4px solid #d9302c;
+            color: #1f8bfd;
+            padding-left: 10px;
+            font-weight: bold;
+            gap: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title span {
+            color: #666;
+            font-size: 0.9em;
+            font-weight: normal;
+        }
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            background-color: #eee;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            color: #999;
+            font-size: 0.8em;
+            padding: 10px 10px 0 10px;
+            box-sizing: border-box;
+        }
+        .upload-btn {
+            background-color: #555;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+        .form-row {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .form-row label {
+            width: 150px;
+            display: block;
+        }
+        .form-row input, .form-row select, .form-row textarea {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-row textarea {
+            min-height: 80px;
+        }
+        .required:after {
+            content: " *";
+            color: #d9302c;
+        }
+        .date-select {
+            display: flex;
+            gap: 5px;
+        }
+        .date-select select {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .save-btn {
+            background-color: #d9302c;
+            color: white;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .cancel-btn {
+            background-color: #aaa;
+            color: white;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            align-items: center;
+        }
+        .grid-item {
+            text-align: center;
+        }
+        .grid-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 5px;
+        }
+        .checkbox-label {
+            text-align: center;
+        }
+        .dropdown-button {
+            background: none;
+            border: none;
+            color: #333;
+            cursor: pointer;
+            font-size: 0.9em;
+            text-align: right;
+        }
+        .radio-group {
+            margin-top: 10px;
+        }
+        .radio-group label {
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .radio-group input {
+            margin-right: 5px;
+        }
+        .submit-btn {
+            background-color: #d9302c;
+            color: white;
+            padding: 8px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        .preview-btn {
+            background: none;
+            border: 1px solid #d9302c;
+            color: #d9302c;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+        .eye-icon {
+            color: #d9302c;
+            margin-right: 5px;
+        }
+        .hr {
+            border: 1px solid #ddd;
+            margin: 20px 0;
+            width: 55%
+        }
+        .buttons-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="section">
+            <div class="section-title">
+                Ngoại ngữ & Tin học <span>(không bắt buộc)</span>
+                <hr class="hr">
+                <button class="dropdown-button">Rút gọn ▲</button>
+            </div>
+            <div class="form-content">
+                <div class="form-row">
+                    <label>Ngoại ngữ</label>
+                    <select style="flex: 1;">
+                        <option>Chọn ngoại ngữ</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>Trình độ</label>
+                    <select style="flex: 1;">
+                        <option>Chọn trình độ</option>
+                    </select>
+                </div>
+                
+                <div class="grid-container">
+                    <div class="grid-item"></div>
+                    <div class="grid-item">Tốt</div>
+                    <div class="grid-item">Khá</div>
+                    <div class="grid-item">Trung bình</div>
+                    <div class="grid-item">Kém</div>
+                </div>
+                
+                <div class="grid-container">
+                    <div class="grid-item">Nghe</div>
+                    <div class="grid-item"><input type="checkbox"></div>
+                    <div class="grid-item"><input type="checkbox"></div>
+                    <div class="grid-item"><input type="checkbox"></div>
+                    <div class="grid-item"><input type="checkbox"></div>
+                </div>
+                
+                <div class="grid-container">
+                    <div class="grid-item">Nói</div>
+                    <div class="grid-item"><input type="checkbox"></div>
+                    <div class="grid-item"><input type="checkbox"></div>
+                    <div class="grid-item"><input type="checkbox"></div>
+                    <div class="grid-item"><input type="checkbox"></div>
+                </div>
+                
+                <div class="grid-container">
+                    <div class="grid-item">Đọc</div>
+                    <div class="grid-item"><input type="checkbox"></div>
+                    <div class="grid-item"><input type="checkbox"></div>
+                    <div class="grid-item"><input type="checkbox"></div>
+                    <div class="grid-item"><input type="checkbox"></div>
+                </div>
+                
+                <div class="grid-container">
+                    <div class="grid-item">Viết</div>
+                    <div class="grid-item"><input type="checkbox"></div>
+                    <div class="grid-item"><input type="checkbox"></div>
+                    <div class="grid-item"><input type="checkbox"></div>
+                    <div class="grid-item"><input type="checkbox"></div>
+                </div>
+                
+                <div style="text-align: center; margin: 15px 0;">
+                    <button type="button" class="save-btn">Lưu</button>
+                    <button type="button" class="cancel-btn">Không lưu</button>
+                </div>
+                
+                <div style="margin-top: 20px;">
+                    <div class="grid-title">Tin học văn phòng</div>
+                    
+                    <div class="grid-container">
+                        <div class="grid-item">MS Word</div>
+                        <div class="grid-item"><input type="checkbox"></div>
+                        <div class="grid-item"><input type="checkbox"></div>
+                        <div class="grid-item"><input type="checkbox"></div>
+                        <div class="grid-item"><input type="checkbox"></div>
+                    </div>
+                    
+                    <div class="grid-container">
+                        <div class="grid-item">MS Excel</div>
+                        <div class="grid-item"><input type="checkbox"></div>
+                        <div class="grid-item"><input type="checkbox"></div>
+                        <div class="grid-item"><input type="checkbox"></div>
+                        <div class="grid-item"><input type="checkbox"></div>
+                    </div>
+                    
+                    <div class="grid-container">
+                        <div class="grid-item">MS Power Point</div>
+                        <div class="grid-item"><input type="checkbox"></div>
+                        <div class="grid-item"><input type="checkbox"></div>
+                        <div class="grid-item"><input type="checkbox"></div>
+                        <div class="grid-item"><input type="checkbox"></div>
+                    </div>
+                    
+                    <div class="grid-container">
+                        <div class="grid-item">MS Outlook</div>
+                        <div class="grid-item"><input type="checkbox"></div>
+                        <div class="grid-item"><input type="checkbox"></div>
+                        <div class="grid-item"><input type="checkbox"></div>
+                        <div class="grid-item"><input type="checkbox"></div>
+                    </div>
+                </div>
+                
+                <div class="form-row" style="margin-top: 15px;">
+                    <label>Phần mềm khác</label>
+                    <input type="text">
+                </div>
+                
+                <div class="form-row">
+                    <label>Các thành tích học tập nổi bật khác</label>
+                    <textarea></textarea>
+                </div>
+                
+                <div style="text-align: center; margin-top: 15px;">
+                    <button type="button" class="save-btn">Lưu</button>
+                    <button type="button" class="cancel-btn">Không lưu</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
