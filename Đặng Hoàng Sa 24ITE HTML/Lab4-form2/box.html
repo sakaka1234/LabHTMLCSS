@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Position Demo (Full)</title>
+  <style>
+    body {
+      height: 3000px;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .section {
+      padding: 50px;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .box {
+      width: 150px;
+      height: 100px;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0;
+    }
+
+    .static-box {
+      background-color: gray;
+      position: static;
+    }
+
+    .relative-box {
+      background-color: royalblue;
+      position: relative;
+      top: 20px;
+      left: 20px;
+    }
+
+    .absolute-container {
+      position: relative;
+      background-color: lightgray;
+      height: 150px;
+      margin-top: 20px;
+    }
+
+    .absolute-box {
+      background-color: crimson;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .fixed-box {
+      background-color: green;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .sticky-header {
+      background-color: darkorange;
+      color: white;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    h2 {
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <div class="sticky-header">
+    🚀 Đây là sticky header – Cuộn xuống và xem nó "dính" ở trên nhé!
+  </div>
+
+  <div class="section">
+    <h2>1. position: static (mặc định)</h2>
+    <div class="box static-box">Static</div>
+  </div>
+
+  <div class="section">
+    <h2>2. position: relative</h2>
+    <div class="box relative-box">Relative</div>
+  </div>
+
+  <div class="section">
+    <h2>3. position: absolute</h2>
+    <div class="absolute-container">
+      <div class="box absolute-box">Absolute</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>4. position: fixed</h2>
+    <p>Cuộn trang để thấy "Fixed Box" luôn nằm ở góc phải bên dưới.</p>
+    <div class="box fixed-box">Fixed</div>
+  </div>
+
+  <div class="section">
+    <h2>5. position: sticky</h2>
+    <p>Đã có một sticky header ở trên! Khi bạn cuộn xuống, nó sẽ dính lại ở đầu trang.</p>
+  </div>
+
+</body>
+</html>

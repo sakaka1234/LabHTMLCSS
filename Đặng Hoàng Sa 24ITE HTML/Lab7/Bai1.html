@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Phòng Khách Sạn & Thuê Xe</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        .booking-container {
+            max-width: 700px;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+        }
+        
+        .nav-tabs {
+            border-bottom: none;
+        }
+        
+        .nav-tabs .nav-link {
+            border: none;
+            background-color: #f8f8f8;
+            color: #76672b;
+            font-weight: bold;
+            border-radius: 0;
+            padding: 15px 30px;
+        }
+        
+        .nav-tabs .nav-link.active {
+            background-color: #f3c800;
+            color: #76672b;
+            border: none;
+        }
+        
+        .form-container {
+            padding: 30px;
+        }
+        
+        .form-control {
+            padding: 12px;
+            border-radius: 0;
+        }
+        
+        .input-group-text {
+            background-color: #f8f8f8;
+            border-radius: 0;
+        }
+        
+        .btn-check-now {
+            background-color: #f3c800;
+            color: #76672b;
+            border: none;
+            padding: 12px 40px;
+            font-weight: bold;
+            border-radius: 0;
+        }
+
+        .yellow-footer {
+            background-color: #f3c800;
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="booking-container">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="bookingTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="hotel-tab" data-bs-toggle="tab" data-bs-target="#hotel" type="button" role="tab" aria-controls="hotel" aria-selected="true">HOTEL</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="car-rental-tab" data-bs-toggle="tab" data-bs-target="#car-rental" type="button" role="tab" aria-controls="car-rental" aria-selected="false">CAR RENTAL</button>
+            </li>
+        </ul>
+
+        <!-- Tab content -->
+        <div class="tab-content" id="bookingTabsContent">
+            <!-- Hotel Tab -->
+            <div class="tab-pane fade show active" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
+                <div class="form-container">
+                    <!-- Hotel Selection -->
+                    <div class="mb-3">
+                        <select class="form-select" aria-label="Hotel selection">
+                            <option selected>-- Select Hotel --</option>
+                            <option value="1">Royal Hotel</option>
+                            <option value="2">Grand Hotel</option>
+                            <option value="3">Luxury Resort</option>
+                        </select>
+                    </div>
+
+                    <!-- Check-in Date -->
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Check-in Date" aria-label="Check-in Date">
+                            <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Check-out Date -->
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Check-out Date" aria-label="Check-out Date">
+                            <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Guests -->
+                    <div class="mb-3">
+                        <select class="form-select" aria-label="Guests selection">
+                            <option selected>-- Guests --</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4 People</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Yellow footer with button -->
+                <div class="yellow-footer">
+                    <button type="button" class="btn btn-check-now">CHECK NOW</button>
+                </div>
+            </div>
+
+            <!-- Car Rental Tab -->
+            <div class="tab-pane fade" id="car-rental" role="tabpanel" aria-labelledby="car-rental-tab">
+                <div class="form-container">
+                    <!-- Form elements for car rental -->
+                    <div class="mb-3">
+                        <select class="form-select" aria-label="Car type selection">
+                            <option selected>-- Select Car Type --</option>
+                            <option value="1">Economy</option>
+                            <option value="2">Compact</option>
+                            <option value="3">SUV</option>
+                            <option value="4">Luxury</option>
+                        </select>
+                    </div>
+
+                    <!-- Pick-up Date -->
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Pick-up Date" aria-label="Pick-up Date">
+                            <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Drop-off Date -->
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Drop-off Date" aria-label="Drop-off Date">
+                            <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yellow footer with button -->
+                <div class="yellow-footer">
+                    <button type="button" class="btn btn-check-now">CHECK NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
